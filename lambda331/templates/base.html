@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
-Hello, this is my landing page. How are you doing? {{ body }}
+Welcome to my simple twitter predictor. Please use the buttons below to navigate to the different pages!
 <br>
-<input id="author_name_input" type="text" placeholder="Twitter user's handle">
+<button onclick="window.location='http://127.0.0.1:5000/test'">Test</button>
+<!--<button onclick="window.location='http://127.0.0.1:5000/user'">Add Users to the database</button>-->
+<!--<button onclick="window.location='http://127.0.0.1:5000/predict_author'">Predict some tweets!</button>-->
+<button onclick="window.location='http://127.0.0.1:5000/reset'">RESET EVERYTHING</button>
+<br>
+<br>
+Here you can add users to the database! Please enter the user you would like to add and press the "Add User" button!<br>
+<br>
+<input id="author_name_input" type="text" placeholder="Twitter handle goes here!">
 <br>
 <button id="author_submit">
-    Insert user into database
+    Add User
 </button>
 <br>
 <br>
-<input id="tweet_text_input" type=text" placeholder="Tweet to classify">
+<input id="tweet_text_input" type="text" placeholder="Tweet to be classified">
 <br>
 <button id="tweet_submit">
-    Classify tweet
+    Classify the tweet
 </button>
 <span id="classify_response"></span>
 <br>
 </body>
-<script src="../static/tweet.js"></script>
+<script src="../static/landing.js"></script>
 </html>
